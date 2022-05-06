@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FichajeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,3 +19,7 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('/');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
+Route::get('/fichar{latitud?}{longitud?}', [App\Http\Controllers\FichajeController::class, 'fichar']);
+Route::delete('/eliminarFichaje-{fichaje}', [FichajeController::class, 'eliminarFichaje'])->name('eliminarFichaje');
+Route::patch('/actualizarFichajes{fichaje}', [FichajeController::class, 'actualizarFichajes'])->name('actualizarFichajes');

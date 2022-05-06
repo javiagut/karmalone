@@ -1,0 +1,321 @@
+
+body{
+    margin: 0;
+    background-color: white;
+}
+header{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#822425;
+    border-bottom: 1px solid rgb(228, 0, 0);
+}
+header h1{
+    font-size: 3.5em;
+    color: white;
+    margin: 0;
+}
+.logoHeader{
+    width: 70px;
+}
+footer{
+    height: 100px;
+    background-color: #822425;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logoutFooter{
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1.2em;
+}
+.logoutFooter:hover{
+    border-radius: 5px;
+    background-color: white;
+    color: #822425;
+}
+
+/*                LOGIN USUARIO              */
+
+.inicioSesionTitulo{
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-size: 2em;
+    color: white;
+    font-weight: bold;
+    background-color: #822425;
+    border-radius: 10px;
+    position: absolute;
+    margin-top: -150px;
+    width: 326px;
+    box-shadow: #822425 0px 0px 15px;
+}
+.tableLogin{
+    width: 250px;
+    display: flex;
+}
+.tableLogin tr{
+    width: 250px;
+}
+.tableLogin td{
+    width: 50px;
+}
+#formLogin{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+    border: 1px solid #822425;
+    box-shadow: #822425 0px 0px 15px;
+}
+#formLogin input[type=email], [type=password], [type=text], [type=date]{
+    border: none;
+    border-bottom: 1px solid black;
+    width: 200px;
+    height: 30px;
+    margin-left: 40px;
+    outline: none;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.iconosLogin{
+    position: absolute;
+    width: 30px;
+    margin-top: 4px;
+}
+#formLogin label{
+    margin-top: 20px;
+    font-size: 1em;
+    margin-bottom: -10px;
+    font-weight: bold;
+}
+#formLogin button[type=submit]{
+    border: none;
+    color: white;
+    background-color: black;
+    width: 250px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#formLogin button[type=submit]:hover{
+    background-color: transparent;
+    color: black;
+}
+#formLogin a{
+    color: black;
+    text-align: center;
+    width: 250px;
+    display: block;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+#formLogin a:hover{
+    color: #822425;
+}
+.checkboxLogin{
+    text-align: left;
+}
+.formRegister{
+    text-align: right;
+    padding-right: 5%;
+}
+#status{
+    color: black;
+    text-align: center;
+    width: 100%;
+}
+
+/*      FICHAR       */
+.generalHome{
+    padding: 50px;
+}
+#fichar{
+    background-color: #822425;
+    color: white;
+    font-size: 1.3em;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.5em;
+    border-radius: 5px;
+    border:  1px solid transparent;
+    cursor: pointer;
+}
+#fichar:hover{
+    background-color: white;
+    color: #822425;
+    border:  1px solid #822425;
+}
+.generalHome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.divFichar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#sinPermisoUbi, #estado{
+    display: none;
+    color: red;
+    border-radius: 5px;
+}
+.divFichajes{
+    width: 480px;
+    height: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+}
+.fichaje{
+    height: 20px;
+    background-color: rgb(33, 134, 0);
+}
+.pausa{
+    height: 20px;
+    background-color: orange;
+}
+.ultimo{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.noTrabajo{
+    height: 20px;
+    background-color: rgb(217, 217, 217);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#hora{
+    position: absolute;
+    text-align: right;
+    font-size: 0.8em;
+    margin-left: 14px;
+}
+#horaFinal{
+    position: absolute;
+    text-align: right;
+    font-size: 0.8em;
+    margin-left: 14px;
+}
+.noTrabajoFinal{
+    height: 20px;
+    background-color: rgb(217, 217, 217);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#leyenda{
+    position: absolute;
+    border: 2px solid #822425;
+    margin-left: 80%;
+    margin-top: -13%;
+    padding: 30px;
+    box-shadow: #822425 0px 0px 15px inset, #822425 0px 0px 15px;
+}
+.colorTrab{
+    height: 20px;
+    width: 20px;
+    background-color: rgb(33, 134, 0);
+    border-radius: 50%;
+}
+.colorDes{
+    height: 20px;
+    width: 20px;
+    background-color: orange;
+    border-radius: 50%;
+}
+.colorNoTrab{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgb(217, 217, 217);
+}
+#tablaFichajes{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+#tablaFichajes table{
+    border-collapse: collapse;
+}
+#tablaFichajes td{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#tablaFichajes td{
+    height: 30px;
+}
+.informativoFichajes{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.accion{
+    text-align: center;
+}
+.basura_fich{
+    width: 20px;
+}
+.guardar_fich{
+    width: 24px;
+}
+.eliminarFichaje{
+    background-color: white;
+    border: none;
+    width: 20px;
+    cursor: pointer;
+}
+.guardarFichajes{
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+.horaFichaje{
+    border: 1px solid transparent;
+    padding-left: 18px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.horaFichaje:hover{
+    border: 1px solid #822425;
+}
+#status{
+    background-color: rgb(56, 226, 56);
+    color: white;
+    font-size: 1.2em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 30%;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}

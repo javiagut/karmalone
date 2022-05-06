@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Fichaje;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        if (count(Fichaje::preguntarFichar()) == 0 || count(Fichaje::preguntarFichar())%2 == 0) {
+            # Acción Entrar
+            $accion='Entrar';
+        }
+        else{
+            # Acción Salir
+            $accion='Salir';
+        }
+        $fichajes = Fichaje::fichajesHoy();
+        return view('home',compact('accion','fichajes'));
     }
 }

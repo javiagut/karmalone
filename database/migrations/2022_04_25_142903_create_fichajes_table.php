@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('id_user');
             $table->string('latitud');
-            $table->string('loongitud');
+            $table->string('longitud');
             $table->timestamps();
             $table->foreign('id_user')->references('id')->on('users');
         });

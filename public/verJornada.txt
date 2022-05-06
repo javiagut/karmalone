@@ -1,0 +1,5 @@
+@if ($i%2!=0 || $i == 0)
+                    <p class="fichajeDentro" {{ '0'==$i ? "style=border-top-left-radius:10px;border-bottom-left-radius:10px;" : '' }}></p>
+                @else
+                    <p class="fichajePausa"  {{ '0'==$i ? "style=border-top-left-radius:10px;border-bottom-left-radius:10px;" : '' }}></p>
+                @endif
