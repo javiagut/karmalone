@@ -16,10 +16,11 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Auth::routes();
+Route::get('/logout', [LogoutController::class,'performAdmin'])->name('logout');
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('/');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/{fecha?}', [App\Http\Controllers\HomeController::class, 'index'])->name('/');
+Route::get('/home/{fecha?}', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
-Route::get('/fichar{latitud?}{longitud?}', [App\Http\Controllers\FichajeController::class, 'fichar']);
+Route::post('/fichar-{fecha?}', [App\Http\Controllers\FichajeController::class, 'fichar'])->name('fichar');
 Route::delete('/eliminarFichaje-{fichaje}', [FichajeController::class, 'eliminarFichaje'])->name('eliminarFichaje');
-Route::patch('/actualizarFichajes{fichaje}', [FichajeController::class, 'actualizarFichajes'])->name('actualizarFichajes');
+Route::patch('/actualizarFichajes{fecha}', [FichajeController::class, 'actualizarFichajes'])->name('actualizarFichajes');

@@ -141,6 +141,9 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
+        //GEOIP LIBRERIA
+        \Torann\GeoIP\GeoIPServiceProvider::class,
+        //
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
@@ -191,7 +194,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        // 'ExampleClass' => App\Example\ExampleClass::class,
+        'GeoIP' => \Torann\GeoIP\Facades\GeoIP::class
     ])->toArray(),
 
 ];

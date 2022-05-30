@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('ausencias', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('id_user');
+            $table->date('fecha');
             $table->bigInteger('id_motivo');
             $table->string('estado');
             $table->timestamps();
