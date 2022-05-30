@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appLogin')
 @section('content')
     <form method="POST" action="{{ route('login') }}" id="formLogin">
         <h3 class="inicioSesionTitulo">Iniciar Sesión</h3>

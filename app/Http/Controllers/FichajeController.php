@@ -15,7 +15,7 @@ class FichajeController extends Controller
             'id_user' => Auth::id(),
             'latitud' => request('latitud'),
             'longitud' => request('longitud'),
-            //'created_at' => Carbon::parse(request('fecha').Carbon::now()->format('H:i:s'))
+            'created_at' => Carbon::parse(request('fecha').Carbon::now()->format('H:i:s'))
         ]);
         return back()->with('status','Fichaje correcto');
     }
