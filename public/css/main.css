@@ -1,7 +1,7 @@
-
 body{
     margin: 0;
     background-color: white;
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 header{
     width: 100%;
@@ -10,7 +10,6 @@ header{
     justify-content: center;
     align-items: center;
     background-color:#822425;
-    border-bottom: 1px solid rgb(228, 0, 0);
 }
 header h1{
     font-size: 3.5em;
@@ -88,7 +87,7 @@ footer{
     border: 1px solid #822425;
     box-shadow: #822425 0px 0px 15px;
 }
-#formLogin input[type=email], [type=password], [type=text], [type=date]{
+#formLogin [type=email], [type=password], [type=text], [type=date]{
     border: none;
     border-bottom: 1px solid black;
     width: 200px;
@@ -163,6 +162,7 @@ footer{
     border-radius: 5px;
     border:  1px solid transparent;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
 #fichar:hover{
@@ -180,6 +180,8 @@ footer{
 .JefeGeneralHome{
     width: 100%;
     display: flex;
+    padding-top: 30px;
+    background-color: white;
 }
 .ausencias{
     width: 32.5%;
@@ -187,7 +189,6 @@ footer{
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 30px;
 }
 .ausencias h2{
     padding-bottom: 10px;
@@ -207,7 +208,6 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 306px;
     margin-bottom: 20px;
     width: 35%;
 }
@@ -289,21 +289,27 @@ footer{
     width: 20px;
     background-color: rgb(33, 134, 0);
     border-radius: 50%;
+    display: flex;
+    margin-right: 5px;
 }
 .colorDes{
     height: 20px;
     width: 20px;
     background-color: orange;
     border-radius: 50%;
+    display: flex;
+    margin-right: 5px;
 }
 .colorNoTrab{
     height: 20px;
     width: 20px;
     border-radius: 50%;
+    display: flex;
+    margin-right: 5px;
     background-color: rgb(217, 217, 217);
 }
 #tablaFichajes{
-    width: 100%;
+    width: 35%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -350,22 +356,23 @@ footer{
     padding-top: 4px;
     padding-bottom: 4px;
     border-radius: 5px;
+    transition: all 0.3s;
 }
 .horaFichaje:hover{
     border: 1px solid #822425;
 }
 #status{
-    background-color: rgb(56, 226, 56);
+    background-color: rgb(0, 151, 0);
     color: white;
     font-size: 1.2em;
     padding-top: 5px;
     padding-bottom: 5px;
-    width: 30%;
+    width: 65%;
     margin-bottom: 30px;
     border-radius: 5px;
 }
 #fechaFichajes{
-    width: 110px;
+    width: 130px;
     margin-left: 70%;
     background: #822425;
     border-radius: 10px;
@@ -373,16 +380,192 @@ footer{
     color: white;
     margin-top: -6.1%;
 }
+.generalTablaFichajes{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /*          RRHH            */
 
-.nav{
+.menuRH{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: left;
+    width: 95%;
+}
+.opcionMenuRH{
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    width: 15%;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+.opcionMenuRH a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
     width: 100%;
-    height: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+.opcionMenuRH a:hover{
+    color: #822425;
+}
+.opcionMenuRH:hover{
+    background-color: white;
+}
+
+/*          RRHH        Usuarios */
+
+.generalUsuariosLista{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 500px;
+    background-color: white;
+}
+.nombreListaUsuario{
+    width: 400px;
+    text-align: left;
+    padding-left: 15px;
+    border: #822425 1px solid;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
     display: flex;
     align-items: center;
+    transition: all 0.5s;
+}
+.nombreListaUsuario:hover{
+    color: #822425;
+}
+.UsuarioLista{
+    display: flex;
+    width: 500px;
+    margin: 10px;
+}
+#formEditarUsuario{
+    display: flex;
     justify-content: center;
 }
-.nav-link{
+#formEditarUsuario input{
+    border-bottom: 1px solid black;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    text-align: center;
+    width: 200px;
+    height: 30px;
+}
+#formEditarUsuario td:nth-of-type(1n+2){
+    display: flex;
+    justify-content: right;
+}
+.close{
+    background-color: transparent;
+    border: none;
     font-size: 1.3em;
+}
+.close:hover{
+    color: #822425;
+}
+input[type="date"]:focus{
+    background-color: transparent;
+}
+.nombreListaUsuario span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nombreListaUsuario span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.3s;
+}
+
+.nombreListaUsuario:hover span {
+    padding-right: 25px;
+}
+
+.nombreListaUsuario:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.generalUsuariosLista h1{
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+/*      USUARIO (RRHH)       */
+
+.generalUsuario{
+    width: 100%;
+    min-height: 500px;
+    padding-top: 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.generalUsuario h2{
+    margin-bottom: 40px;
+}
+.buscadorUsuarios{
+    display: flex;
+    width: 19.5%;
+    margin-right: 70%;
+    margin-top: 9.5%;
+    position: absolute;
+}
+.buscadorUsuarios input{width: 100%;}
+
+#map{
+    height: 400px;
+    width: 700px;
+    border: 1px solid black;
+    margin-bottom: 50px;
+}
+.infoUsuario{
+    width: 100%;
+    display: flex;
+    margin-top: 25px;
+}
+.mapa{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filtroFechaInfoUsuario{
+    width: 10%;
+}
+#fechaFichajesInfoUsuario{
+    width: 100%;
+    background: #822425;
+    border-radius: 10px;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+.fichajesInfoUsuario{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

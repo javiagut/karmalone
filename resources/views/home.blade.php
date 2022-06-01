@@ -26,6 +26,7 @@
         </form>
     </div>
     <div class="generalHome">
+    
         <div class="divFichar">
             @if (session('status'))
                 <div class="alert alert-success" role="alert" id="status">
@@ -82,13 +83,56 @@
                 <span id="hora" style="margin-left: {{($entrada*20)-15}}px">{{date('H:i', strtotime($fichajes[$i-1]['created_at']))}}</span>
                 <p class="noTrabajoFinal" style='width:{{480-$entrada*20}}px'></p>
             @else
-                <p style="color: red">Hoy no ha fichado</p>
+                <p style="color: red">No hay fichajes en la fecha indicada</p>
             @endif
         </div>
         @if (count($fichajes)>0)
             <p>Hoy llevas trabajado: {{$tiempoTrabajado}} horas</p>
         @endif
         <input type="date" id="fechaFichajes" value="{{$fecha}}">
+        @if (count($fichajes)>0)
+    <div class="generalTablaFichajes">
+        <div id="tablaFichajes">
+            <form method='POST' action="{{route('actualizarFichajes',$fecha)}}">
+                @csrf
+                @method('PATCH')
+            <table>
+                <tr class="informativoFichajes">
+                    <td>
+                        <button class="guardarFichajes" type="submit"><img class="guardar_fich" src="{{asset('img/guardar.jpg')}}"></button>
+                    </td>
+                    <td>Acción</td>
+                    <td>Hora</td>
+                </tr>
+                <?php $i=0 ?>
+                @foreach ($fichajes as $fichaje)
+                    <tr>
+                        <td></td>
+                        <td class="accion" {{$i==0 || $i%2==0 ? 'style=color:green' : 'style=color:red'}}>{{$i==0 || $i%2==0 ? 'Entrada' : 'Salida'}}</td>
+                        <?php  $hora = date('H:i', strtotime($fichaje['created_at'])) ?>
+                        <td><input name="fichaje{{$i}}" class="horaFichaje" type="time" value="{{$hora}}" required></td>
+                    </tr>
+                    <?php $i++ ?>
+                @endforeach
+            </table>
+            </form>
+            <table>
+                    <tr><td></td></tr>
+                </form>
+                    @foreach ($fichajes as $fichaje)
+                        <tr>
+                            <td>
+                                <form action="{{ route('eliminarFichaje', $fichaje['id']) }}" method="POST" >
+                                    @csrf @method('DELETE')
+                                    <button class="eliminarFichaje" type="submit"><img class="basura_fich" src="{{asset('img/basura.png')}}"></button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+            </table>
+        </div>
+    </div>
+@endif
     </div>
     <div class="jefeLeyenda">
         <div id="leyenda">
@@ -109,45 +153,5 @@
         </div>
     </div>
 </div>
-@if (count($fichajes)>0)
-    <div id="tablaFichajes">
-        <form method='POST' action="{{route('actualizarFichajes',$fecha)}}">
-            @csrf
-            @method('PATCH')
-        <table>
-            <tr class="informativoFichajes">
-                <td>
-                    <button class="guardarFichajes" type="submit"><img class="guardar_fich" src="{{asset('img/guardar.jpg')}}"></button>
-                </td>
-                <td>Acción</td>
-                <td>Hora</td>
-            </tr>
-            <?php $i=0 ?>
-            @foreach ($fichajes as $fichaje)
-                <tr>
-                    <td></td>
-                    <td class="accion" {{$i==0 || $i%2==0 ? 'style=color:green' : 'style=color:red'}}>{{$i==0 || $i%2==0 ? 'Entrada' : 'Salida'}}</td>
-                    <?php  $hora = date('H:i', strtotime($fichaje['created_at'])) ?>
-                    <td><input name="fichaje{{$i}}" class="horaFichaje" type="time" value="{{$hora}}" required></td>
-                </tr>
-                <?php $i++ ?>
-            @endforeach
-        </table>
-        </form>
-        <table>
-                <tr><td></td></tr>
-            </form>
-                @foreach ($fichajes as $fichaje)
-                    <tr>
-                        <td>
-                            <form action="{{ route('eliminarFichaje', $fichaje['id']) }}" method="POST" >
-                                @csrf @method('DELETE')
-                                <button class="eliminarFichaje" type="submit"><img class="basura_fich" src="{{asset('img/basura.png')}}"></button>
-                            </form>
-                        </td>
-                    </tr>
-                @endforeach
-        </table>
-    </div>
-@endif
+
 @endsection
