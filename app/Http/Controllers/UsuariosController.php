@@ -56,17 +56,22 @@ class UsuariosController extends Controller
         return back()->with('status','Se ha eliminado el usuario correctamente');
     }
     public function nuevoUsuario(){
-        User::create([
-            'nombre' => request('name'),
-            'apellido1' => request('apellido1'),
-            'apellido2' => request('apellido2'),
-            'contacto1' => request('contacto1'),
-            'contacto2' => request('contacto2'),
-            'nacimiento' => request('nacimiento'),
-            'email' => request('email'),
-            'password' => Hash::make(request('password')),
-            'rol' => request('rol')
-        ]);
-        return back()->with('status','Se ha creado el usuario correctamente');
+        if(count(User::where('email','=',request('email'))->get())>0){
+            return back()->with('error','Correo electrónico ya utilizado');
+        }
+        else{
+            User::create([
+                'nombre' => request('name'),
+                'apellido1' => request('apellido1'),
+                'apellido2' => request('apellido2'),
+                'contacto1' => request('contacto1'),
+                'contacto2' => request('contacto2'),
+                'nacimiento' => request('nacimiento'),
+                'email' => request('email'),
+                'password' => Hash::make(request('password')),
+                'rol' => request('rol')
+            ]);
+            return back()->with('status','Se ha creado el usuario correctamente');
+        }
     }
 }

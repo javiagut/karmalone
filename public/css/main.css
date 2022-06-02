@@ -873,3 +873,14 @@ footer{
     background: rgb(0,116,236);
     background: linear-gradient(0deg, rgba(0,116,236,0.329551889115021) 0%, rgba(255,255,255,1) 21%); 
 }
+
+.contras{
+    color: red;
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    width: 200%;
+    display: none;
+}
