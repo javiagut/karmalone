@@ -13,11 +13,11 @@ class Fichaje extends Model
     use HasFactory;
 
     static function fichajesHoy($fecha){
-        return Fichaje::where('id_user','=',Auth::id())->where('created_at','>',Carbon::parse($fecha))->where('created_at','<',Carbon::parse($fecha)->addDay())->orderBy('id','ASC')->get()->toArray();
+        return Fichaje::where('id_user','=',Auth::id())->where('created_at','>',Carbon::parse($fecha))->where('created_at','<',Carbon::parse($fecha)->addDay())->orderBy('created_at','ASC')->get()->toArray();
     }
 
     static function tiempoTrabajado($fecha){
-        $fichajes = Fichaje::where('id_user','=',Auth::id())->where('created_at','>',Carbon::parse($fecha))->where('created_at','<',Carbon::parse($fecha)->addDay())->orderBy('id','ASC')->get();
+        $fichajes = Fichaje::where('id_user','=',Auth::id())->where('created_at','>',Carbon::parse($fecha))->where('created_at','<',Carbon::parse($fecha)->addDay())->orderBy('created_at','ASC')->get();
         $horas = [];
         $i=0;
         foreach ($fichajes as $fichaje){

@@ -51,5 +51,8 @@ $(document).ready(function () {
             window.location.href = input.value;
         }
       });
-    
+      function esconder(){
+        if($("#status") != null) $('#status').hide();
+    }
+    setTimeout(esconder, 5000);
 });

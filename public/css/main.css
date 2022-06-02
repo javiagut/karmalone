@@ -9,37 +9,15 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:#822425;
 }
 header h1{
     font-size: 3.5em;
-    color: white;
+    color: black;
     margin: 0;
 }
 .logoHeader{
     width: 70px;
-}
-footer{
-    height: 100px;
-    background-color: #822425;
-    padding: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.logoutFooter{
-    text-decoration: none;
-    color: white;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: 1.2em;
-}
-.logoutFooter:hover{
-    border-radius: 5px;
-    background-color: white;
-    color: #822425;
+    margin-right: 10px;
 }
 
 /*                LOGIN USUARIO              */
@@ -54,12 +32,12 @@ footer{
     font-size: 2em;
     color: white;
     font-weight: bold;
-    background-color: #822425;
+    background-color: #0074EC;
     border-radius: 10px;
     position: absolute;
     margin-top: -150px;
     width: 326px;
-    box-shadow: #822425 0px 0px 15px;
+    box-shadow: #0074EC 0px 0px 15px;
 }
 .tableLogin{
     width: 250px;
@@ -84,15 +62,14 @@ footer{
     margin-left: auto;
     margin-right: auto;
     padding-top: 100px;
-    border: 1px solid #822425;
-    box-shadow: #822425 0px 0px 15px;
+    border: 1px solid #0074EC;
+    box-shadow: #0074EC 0px 0px 15px;
 }
 #formLogin [type=email], [type=password], [type=text], [type=date]{
     border: none;
     border-bottom: 1px solid black;
     width: 200px;
     height: 30px;
-    margin-left: 40px;
     outline: none;
     margin-bottom: 20px;
     display: flex;
@@ -108,11 +85,12 @@ footer{
     font-size: 1em;
     margin-bottom: -10px;
     font-weight: bold;
+    color: black;
 }
 #formLogin button[type=submit]{
     border: none;
     color: white;
-    background-color: black;
+    background-color: #0074EC;
     width: 250px;
     font-size: 1.5em;
     border-radius: 10px;
@@ -120,7 +98,7 @@ footer{
     margin-bottom: 10px;
 }
 #formLogin button[type=submit]:hover{
-    background-color: transparent;
+    background-color: white;
     color: black;
 }
 #formLogin a{
@@ -134,7 +112,7 @@ footer{
     text-decoration: none;
 }
 #formLogin a:hover{
-    color: #822425;
+    color: #0074EC;
 }
 .checkboxLogin{
     text-align: left;
@@ -151,8 +129,8 @@ footer{
 
 /*      FICHAR       */
 #fichar{
-    background-color: #822425;
-    color: white;
+    background-color: white;
+    color: black;
     font-size: 1.3em;
     padding-left: 70px;
     padding-right: 70px;
@@ -160,15 +138,15 @@ footer{
     padding-bottom: 10px;
     font-size: 1.5em;
     border-radius: 5px;
-    border:  1px solid transparent;
+    border:  1px solid #0074EC;
     cursor: pointer;
     transition: all 0.3s;
 }
 
 #fichar:hover{
-    background-color: white;
-    color: #822425;
-    border:  1px solid #822425;
+    background-color: #0074EC;
+    color: white;
+    border:  1px solid #0074EC;
 }
 #fichar:disabled{
     background-color: grey;
@@ -182,18 +160,23 @@ footer{
     display: flex;
     padding-top: 30px;
     background-color: white;
+    margin-bottom: 50px;
 }
 .ausencias{
-    width: 32.5%;
+    width: 30%;
     text-align: center;
     display: flex;
     align-items: center;
     flex-direction: column;
+    border: 2px solid #0074EC;
+    border-radius: 10px;
+    margin-left: 20px;
+    padding: 20px;
 }
 .ausencias h2{
     padding-bottom: 10px;
     width: 80%;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid #0074EC;
 }
 .ausencias td{
     width: 50%;
@@ -201,12 +184,17 @@ footer{
     padding-bottom: 15px;
 }
 #motivo{
-    width: 50%;
+    width: 75%;
+    margin-left: 15px;
+}
+#motivo2{
+    width: 133%;
+    margin-left: -33%;
 }
 .generalHome{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    padding-top: 1%;
     align-items: center;
     margin-bottom: 20px;
     width: 35%;
@@ -227,14 +215,14 @@ footer{
     cursor: pointer;
 }
 #reload:hover{
-    color: #822425;
+    color: #0074EC;
 }
 
 .divFichajes{
     width: 480px;
     height: 20px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 60px;
+    margin-bottom: 80px;
     display: flex;
 }
 .fichaje{
@@ -266,7 +254,18 @@ footer{
     text-align: right;
     font-size: 0.8em;
     margin-left: 14px;
+    color: grey;
 }
+.marginTopHora{
+    margin-top: -20px;
+    color: rgb(33, 134, 0);
+}
+
+.marginbottomHora{
+    margin-top: 20px;
+    color: orange;
+}
+
 .noTrabajoFinal{
     height: 20px;
     background-color: rgb(217, 217, 217);
@@ -280,9 +279,10 @@ footer{
     justify-content: center;
 }
 #leyenda{
-    border: 2px solid #822425;
+    border: 2px solid #0074EC;
     padding: 30px;
-    box-shadow: #822425 0px 0px 15px inset, #822425 0px 0px 15px;
+    box-shadow: #0074EC 0px 0px 15px inset, #0074EC 0px 0px 15px;
+    margin-top: -70%;
 }
 .colorTrab{
     height: 20px;
@@ -309,11 +309,20 @@ footer{
     background-color: rgb(217, 217, 217);
 }
 #tablaFichajes{
-    width: 35%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 100px;
+}
+#tablaFichajes td{
+    height: 30px;
+}
+.tabelFich th{
+    background-color: #0074EC;
+    color: white;
+}
+.tabelFich tr:nth-child(odd) td:nth-child(even) {
+    background-color: #ffc4c4;
 }
 #tablaFichajes table{
     border-collapse: collapse;
@@ -359,7 +368,7 @@ footer{
     transition: all 0.3s;
 }
 .horaFichaje:hover{
-    border: 1px solid #822425;
+    border: 1px solid #0074EC;
 }
 #status{
     background-color: rgb(0, 151, 0);
@@ -373,8 +382,8 @@ footer{
 }
 #fechaFichajes{
     width: 130px;
-    margin-left: 70%;
-    background: #822425;
+    margin-left: 100%;
+    background: #0074EC;
     border-radius: 10px;
     padding-left: 10px;
     color: white;
@@ -393,13 +402,12 @@ footer{
     display: flex;
     flex-direction: column;
     position: absolute;
-    justify-content: left;
-    width: 95%;
+    width: 13%;
+    margin-right: 70%;
 }
 .opcionMenuRH{
     border-right: 1px solid white;
     border-left: 1px solid white;
-    width: 15%;
     height: 30px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -418,7 +426,7 @@ footer{
     transition: all 0.5s;
 }
 .opcionMenuRH a:hover{
-    color: #822425;
+    color: #0074EC;
 }
 .opcionMenuRH:hover{
     background-color: white;
@@ -438,7 +446,7 @@ footer{
     width: 400px;
     text-align: left;
     padding-left: 15px;
-    border: #822425 1px solid;
+    border: #0074EC 1px solid;
     border-radius: 10px;
     text-decoration: none;
     color: black;
@@ -448,11 +456,11 @@ footer{
     transition: all 0.5s;
 }
 .nombreListaUsuario:hover{
-    color: #822425;
+    color: #0074EC;
 }
 .UsuarioLista{
     display: flex;
-    width: 500px;
+    width: 33%;
     margin: 10px;
 }
 #formEditarUsuario{
@@ -478,7 +486,7 @@ footer{
     font-size: 1.3em;
 }
 .close:hover{
-    color: #822425;
+    color: #0074EC;
 }
 input[type="date"]:focus{
     background-color: transparent;
@@ -511,6 +519,10 @@ input[type="date"]:focus{
 .generalUsuariosLista h1{
     margin-top: 30px;
     margin-bottom: 60px;
+    width: 40%;
+    text-align: center;
+    border-bottom: 2px solid #0074EC;
+    padding-bottom: 20px;
 }
 
 /*      USUARIO (RRHH)       */
@@ -522,6 +534,7 @@ input[type="date"]:focus{
     text-align: center;
     display: flex;
     flex-direction: column;
+    background-color: white;
 }
 .generalUsuario h2{
     margin-bottom: 40px;
@@ -537,7 +550,7 @@ input[type="date"]:focus{
 
 #map{
     height: 400px;
-    width: 700px;
+    width: 80%;
     border: 1px solid black;
     margin-bottom: 50px;
 }
@@ -557,7 +570,7 @@ input[type="date"]:focus{
 }
 #fechaFichajesInfoUsuario{
     width: 100%;
-    background: #822425;
+    background: #0074EC;
     border-radius: 10px;
     color: white;
     margin: 0;
@@ -565,7 +578,298 @@ input[type="date"]:focus{
 }
 .fichajesInfoUsuario{
     width: 45%;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+.tablaInfoFichajesUsuario{
+    width: 73%;
+    font-size: 1.2em;
+    border-collapse: collapse;
+    border: 1px solid antiquewhite;
+}
+.tablaInfoFichajesUsuario th{
+    background-color: #0074EC;
+    color: white;
+}
+.tablaInfoFichajesUsuario td{
+    height: 30px;
+}
+.tablaInfoFichajesUsuario tr:nth-child(odd) {
+    background-color: #9afeff;
+}
+input{
+    outline: none;
+}
+/* PAGINACION */
+
+.d-flex{
+    margin-top: 20px;
+}
+.h-5{
+    height: 20px;
+    width: 20px;
+}
+.esconder{
+    display: none;
+}
+.desplegableAdministr{
+    background-color: #0074EC;
+    color: white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-top: none;
+    border-bottom: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+}
+.administrON{
+    background-color: white;
+    color: #0074EC;
+    border: none;
+    
+}
+.administrSubON{
+    background-color: #0074EC;
+    color: white;
+    border: none;
+}
+.textarea{
+    border:1px solid black;
+    height: 160px;
+    width:280px;
+    margin-left:20px;
+}
+#tablaAusencias{
+    width: 120%;
+    height: auto;
+    margin-top: 50px;
+    margin-left: -30%;
+    border-collapse: collapse;
+}
+#tablaAusencias td{
+    padding: 5px;
+    text-align: left;
+    border: 1px solid #9afeff;
+    min-width: 150px;
+}
+
+.bodyLogin{
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgb(255, 255, 255) 1%, #a8d3ff 60%, rgb(255, 255, 255) 80%);
+}
+
+.apartadoHome{
+    width: 100%;
+    height: 500px;
+}
+
+
+/*Aquí debajo va el FOOTER*/
+
+footer{
+    width: 100%;
+    padding-bottom: 50px;
+    background-size: cover;
+}
+
+.container__footer{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.box__footer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.box__footer .logo img{
+    /* width: 180px; */
+}
+
+.box__footer .terms{
+    max-width: 350px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: #7a7a7a;
+    font-size: 18px;
+}
+
+.box__footer h2{
+    margin-bottom: 30px;
+    color: #343434;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.box__footer a{
+    margin-top: 10px;
+    color: #7a7a7a;
+    font-weight: 600;
+}
+
+.box__footer a:hover{
+    opacity: 0.8;
+    color: #0074EC;
+}
+
+.box__footer a .fab{
+    font-size: 20px;
+}
+
+.box__copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.box__copyright p{
+    margin-top: 20px;
+    color: #7a7a7a;
+}
+
+.box__copyright hr{
+    border: none;
+    height: 1px;
+    background-color: #7a7a7a;
+}
+.nombreKfooter{
+    font-size: 2.5em;
+    margin-left: 10%;
+}
+.icoRS{
+    width: 20px;
+    margin-right: 5px;
+}
+.inS{
+    width: 150%;
+    height: 100%;
+    box-shadow:  #0074EC 0px 15px 15px;
+}
+.formLoginLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+    border: none;
+    box-shadow: none;
+}
+.apartado1Home{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.apartado1Home div{
+    height: 100%;
     display: flex;
     justify-content: center;
+    width: 50%;
+}
+.apartado1Home img{
+    width: 54%;
+}
+.apartado1Hometexto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+}
+.apartado1Hometexto div{
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    box-shadow: #ffffff 0px 0px 15px;
+}
+.apartado1Hometexto div:hover{transform: scale(1.1)}
+.apartado2Hometexto div:hover{transform: scale(1.1)}
+.apartado2Hometexto div{
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    box-shadow: #ffffff 0px 0px 15px;
+}
+.apartado2Hometexto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.apartado2Home{
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 200px;
+    display: flex;
+    align-items: center;
+}
+.apartado2Home img{
+    width: 40%;
+}
+.texto2{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+.divlogoutFooter{
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    padding-right: 40px;
+    margin-left: 90%;
+}
+.logoutFooter{
+    color: #0074EC;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+.logoutFooter:hover{
+    color: white;
+    background-color: #0074EC;
+}
+.titleHeader{
+    position: absolute;
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+.foot2{
+    margin-top: 100px;
+    border:1px solid #a7d2ff;
+    background: rgb(0,116,236);
+    background: linear-gradient(0deg, rgba(0,116,236,0.329551889115021) 0%, rgba(255,255,255,1) 21%); 
 }

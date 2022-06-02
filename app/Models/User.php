@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -28,6 +30,25 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    /**
+     * Get a validator for an incoming registration request.
+     *
+     * @param  array  $data
+     * @return \Illuminate\Contracts\Validation\Validator
+     */
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'name' => ['required', 'string','max:255'],
+            'apellido1' => ['required', 'string', 'max:50'],
+            'apellido2' => ['nullable','string', 'max:50'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:clientes'],
+            'password' => ['required', 'string','max:16', 'confirmed'],
+            'contacto1' => ['required', 'string', 'max:12'],
+            'contacto2' => ['nullable','string', 'max:12'],
+        ]);
+    }
 
     /**
      * The attributes that should be cast.

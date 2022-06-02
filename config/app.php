@@ -95,7 +95,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -108,7 +108,7 @@ return [
     |
     */
 
-    'faker_locale' => 'en_US',
+    'faker_locale' => 'es_ES',
 
     /*
     |--------------------------------------------------------------------------
@@ -141,8 +141,8 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
-        //GEOIP LIBRERIA
-        \Torann\GeoIP\GeoIPServiceProvider::class,
+        //IDIOMA CARBON LIBRERIA
+        Jenssegers\Date\DateServiceProvider::class,
         //
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
@@ -194,7 +194,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        'GeoIP' => \Torann\GeoIP\Facades\GeoIP::class
+        'Date' => Jenssegers\Date\Date::class,
     ])->toArray(),
 
 ];

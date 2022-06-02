@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '3acc947e1de9fe7ac7f494dec4f4b55fa4d38a5f',
+        'reference' => '21e9c409adad05d6779f4ef6ca29af80f0bbd0cb',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -376,6 +376,15 @@
                 0 => 'v9.9.0',
             ),
         ),
+        'jenssegers/date' => array(
+            'pretty_version' => 'v4.0.0',
+            'version' => '4.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../jenssegers/date',
+            'aliases' => array(),
+            'reference' => '506f86096e0b512f9ece6ad0ccae62b03c125771',
+            'dev_requirement' => false,
+        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -397,7 +406,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '3acc947e1de9fe7ac7f494dec4f4b55fa4d38a5f',
+            'reference' => '21e9c409adad05d6779f4ef6ca29af80f0bbd0cb',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(

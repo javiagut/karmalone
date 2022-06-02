@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ausencia;
 use Illuminate\Http\Request;
 use App\Models\Fichaje;
 use App\Models\Motivo;
@@ -44,6 +45,7 @@ class HomeController extends Controller
         $tiempoTrabajado = Fichaje::tiempoTrabajado($fecha);
         $fecha = Carbon::parse($fecha)->format('Y-m-d');
         $rol = User::find(Auth::id())->rol;
-        return view('home',compact('accion','fichajes','tiempoTrabajado','fecha','motivos','rol'));
+        $ausencias = Ausencia::orderBy('fecha','DESC')->orderBy('updated_at','ASC')->paginate(5);
+        return view('home',compact('accion','fichajes','tiempoTrabajado','fecha','motivos','rol','ausencias'));
     }
 }

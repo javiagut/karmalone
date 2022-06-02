@@ -39,15 +39,28 @@ $(document).ready(function () {
     if(document.getElementsByClassName('fichaje')){
         var fichajes = document.getElementsByClassName('fichaje');
         for (var i = 1; i < fichajes.length; i++) {
-            if (i>=fichajes.length) fichajes[i].classList = 'fichaje pausa ultimo';
-            else fichajes[i].classList = 'fichaje pausa';
+            if (i>=fichajes.length){
+                fichajes[i].classList = 'fichaje pausa ultimo';
+            }
+            else{
+                fichajes[i].classList = 'fichaje pausa';
+            }
             i++;
         }
     }
+
+    var hora = document.querySelectorAll('#hora');
+    for (let i = 0; i < hora.length; i++) {
+        if (i==0 || i%2==0) {
+            hora[i].classList = 'marginTopHora';
+        }
+        else hora[i].classList = 'marginbottomHora';
+    }
+
     function esconder(){
         if($("#status") != null) $('#status').hide();
     }
-    setTimeout(esconder, 2500);
+    setTimeout(esconder, 5000);
 
 });
 
